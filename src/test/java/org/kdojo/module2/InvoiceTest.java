@@ -23,7 +23,7 @@ class InvoiceTest {
     @Test
     void testSubtotal() {
         Invoice invoice = new Invoice(Arrays.asList(item1, item2), 0, 0);
-        double subtotal = invoice.getNetPriceSum();
+        double subtotal = invoice.getSum();
         // Subtotal should be 100 + 150 = 250
         assertEquals(250, subtotal);
     }
