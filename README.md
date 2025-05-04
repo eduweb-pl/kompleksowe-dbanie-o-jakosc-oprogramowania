@@ -36,6 +36,13 @@ The project uses the following testing libraries:
 - AssertJ - for fluent assertions
 - Mockito - for mocking in tests
 
+## Java Runtime Dependencies
+
+The project uses the following runtime libraries:
+- JavaMail API - for email functionality
+- Dotenv Java - for environment variables management
+- MySQL Connector - for database connectivity
+
 ## Running JavaScript Tests
 
 1. Install dependencies:
