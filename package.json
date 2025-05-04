@@ -1,0 +1,11 @@
+{
+  "name": "kompleksowe-dbanie-o-jakosc-oprogramowania",
+  "version": "1.0.0",
+  "description": "Clean Code and Testing Practice",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+} 

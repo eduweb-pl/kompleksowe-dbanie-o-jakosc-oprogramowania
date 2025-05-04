@@ -48,6 +48,7 @@ coverage/
 .next/
 .nuxt/
 .cache/
+package-lock.json
 
 # Python
 __pycache__/
@@ -55,7 +56,9 @@ __pycache__/
 *$py.class
 *.so
 .Python
+build/
 develop-eggs/
+dist/
 downloads/
 eggs/
 .eggs/
@@ -68,6 +71,7 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+.env
 .venv
 env/
 venv/

@@ -8,6 +8,8 @@ This repository is for practicing writing clean code and tests in various langua
 
 - Java 11+
 - Maven
+- Node.js 14+
+- npm
 
 ## Running Java Tests
 
@@ -18,3 +20,45 @@ This repository is for practicing writing clean code and tests in various langua
     ```sh
     mvn test
     ```
+
+## Running JavaScript Tests
+
+1. Install dependencies:
+
+    ```sh
+    npm install
+    ```
+
+2. Run all tests:
+
+    ```sh
+    npm test
+    ```
+
+3. Run specific test file:
+
+    ```sh
+    npm test invoice.test.js
+    ```
+
+## Project Structure
+
+```
+src/
+├── main/
+│   └── java/
+│       └── org/
+│           └── kdojo/
+│               └── module1/
+│                   ├── cleanCode/
+│                   └── noCleanCode/
+└── test/
+    ├── java/
+    │   └── org/
+    │       └── kdojo/
+    │           └── module1/
+    │               ├── cleanCode/
+    │               └── noCleanCode/
+    └── javascript/
+        └── invoice.test.js
+```
