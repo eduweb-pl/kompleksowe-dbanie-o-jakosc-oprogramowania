@@ -13,6 +13,10 @@ class InvoiceItem {
         this.unitPrice = unitPrice;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
     public double totalPrice() {
         return quantity * unitPrice;
     }
@@ -39,5 +43,15 @@ class Invoice {
 
     public double getTotalWithTax() {
         return getTotalWithDiscount() * (1 + taxRate / 100);
+    }
+
+    public String getDescription(int position) {
+        try{
+            return items.get(position - 1).getDescription();
+        }
+        catch(IndexOutOfBoundsException e){
+            throw new IndexOutOfBoundsException("Item's number out of range");
+        }
+        
     }
 }

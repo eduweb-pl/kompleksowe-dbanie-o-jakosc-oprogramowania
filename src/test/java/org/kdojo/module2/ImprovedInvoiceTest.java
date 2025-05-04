@@ -49,6 +49,21 @@ class ImprovedInvoiceTest {
 
     @Test
     void shouldCalculateGrossPriceAsZeroWhenThereAreNoItems() {
+        Invoice emptyInvoice = new Invoice(Arrays.asList(), 0, 0);
+        double totalWithTax = emptyInvoice.getTotalWithTax();
+        assertThat(totalWithTax).isZero();
+    }
 
+    @Test
+    void shouldSetUpDescriptionCorrectlyForTheFirstElement() {
+        String description = invoice.getDescription(1);
+        assertThat(description).isEqualTo("Consulting");
+    }
+
+    @Test
+    void shouldThrowExceptionWhenGettingDescriptionAndElementDoesntExists() {
+        assertThatThrownBy(() -> invoice.getDescription(3))
+            .isInstanceOf(IndexOutOfBoundsException.class)
+            .hasMessage("Item's number out of range");
     }
 }
