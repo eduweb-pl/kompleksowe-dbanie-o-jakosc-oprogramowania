@@ -17,11 +17,24 @@ This repository is for practicing writing clean code and tests in various langua
 
 1. Navigate to the root directory of the project where the `pom.xml` file is located.
 
-2. Run the tests using Maven:
+2. Install dependencies:
+
+    ```sh
+    mvn clean install
+    ```
+
+3. Run the tests using Maven:
 
     ```sh
     mvn test
     ```
+
+## Java Testing Dependencies
+
+The project uses the following testing libraries:
+- JUnit 5 - for test framework
+- AssertJ - for fluent assertions
+- Mockito - for mocking in tests
 
 ## Running JavaScript Tests
 
