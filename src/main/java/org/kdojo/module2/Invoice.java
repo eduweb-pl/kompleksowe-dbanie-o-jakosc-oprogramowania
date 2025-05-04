@@ -29,12 +29,12 @@ class Invoice {
         this.taxRate = taxRate;
     }
 
-    public double getSum() {
+    public double getNetPriceSum() {
         return items.stream().mapToDouble(InvoiceItem::totalPrice).sum();
     }
 
     public double getTotalWithDiscount() {
-        return getSum() * (1 - discount / 100);
+        return getNetPriceSum() * (1 - discount / 100);
     }
 
     public double getTotalWithTax() {

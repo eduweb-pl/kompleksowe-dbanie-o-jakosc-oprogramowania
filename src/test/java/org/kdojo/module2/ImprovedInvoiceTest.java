@@ -23,7 +23,7 @@ class ImprovedInvoiceTest {
     @Test
     void shouldCalculateSubtotalAsSumOfAllItemsWithoutDiscount() {
         Invoice invoice = new Invoice(Arrays.asList(consulting, training), 0, 0);
-        double subtotal = invoice.getSum();
+        double subtotal = invoice.getNetPriceSum();
         assertThat(subtotal).isEqualTo(5500);
     }
 
