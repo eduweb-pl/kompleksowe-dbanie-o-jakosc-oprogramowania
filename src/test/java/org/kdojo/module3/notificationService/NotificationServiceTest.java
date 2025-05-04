@@ -92,7 +92,7 @@ class NotificationServiceTest {
         notificationService = new NotificationService(mockEmailService, stubDatabaseService, List.of("alice@example.com"), "admin@example.com");
 
         doAnswer(invocation -> {
-            Thread.sleep(500); // Simulate delay
+            Thread.sleep(2000); // Simulate delay
             return null;
         }).when(mockEmailService).sendEmail(anyString(), anyString(), anyString());
 
