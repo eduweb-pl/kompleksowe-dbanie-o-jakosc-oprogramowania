@@ -10,6 +10,8 @@ This repository is for practicing writing clean code and tests in various langua
 - Maven
 - Node.js 14+
 - npm
+- Python 3.8+
+- pip
 
 ## Running Java Tests
 
@@ -41,6 +43,32 @@ This repository is for practicing writing clean code and tests in various langua
     npm test invoice.test.js
     ```
 
+## Running Python Tests
+
+1. Install dependencies:
+
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+2. Run all tests:
+
+    ```sh
+    python3 -m pytest -v
+    ```
+
+3. Run specific test file:
+
+    ```sh
+    python3 -m pytest src/test/python/module2/test_invoice.py -v
+    ```
+
+4. Run tests with coverage:
+
+    ```sh
+    python3 -m pytest src/test/python/module2/test_invoice.py --cov=src/main/python
+    ```
+
 ## Project Structure
 
 ```
@@ -62,3 +90,14 @@ src/
     └── javascript/
         └── invoice.test.js
 ```
+
+## Python Project Setup
+
+The Python project requires the following files:
+
+- `requirements.txt` - Python dependencies (pytest and pytest-cov)
+- `src/__init__.py` - marks the src directory as a Python package
+- `src/python/__init__.py` - marks the python directory as a package
+- `src/python/module2/__init__.py` - marks the module2 directory as a package
+
+This minimal setup allows for proper Python module imports and test execution.
